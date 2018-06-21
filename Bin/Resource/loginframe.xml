@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Window size="436,310" sizebox="4,4,4,4" caption="0,0,0,186" showshadow="true" shadowimage="images/shadow.png" shadowcorner="23,13,23,33">
+	<Font id="0" name="微软雅黑" size="12"/>
+	<Font id="1" name="微软雅黑" size="12"/>
+	<Font id="2" name="微软雅黑" size="15"/>
+	<Font id="3" name="微软雅黑" size="12"/>
+	<VerticalLayout bkcolor="#FFFFFFFF">
+		<!-- 标题栏 -->
+		<HorizontalLayout name="title_layout" height="186" bkimage="file='images/login_bg.png' ytiled='true'">
+			<Control />
+			<!-- 系统按钮 -->
+			<HorizontalLayout width="48" height="16" padding="0,10,0,0" >
+				<Button tooltip="最小化" name="minbtn" padding="0,0,0,0" pos="0,0,16,0" normalimage="images/unify_btn_min_normal.png" hotimage="images/unify_btn_min_hover.png" pushedimage="images/unify_btn_min_down.png"/>
+				<Button tooltip="关闭" name="closebtn" padding="8,0,0,0" pos="0,0,16,0" normalimage="images/unify_btn_close_normal.png" hotimage="images/unify_btn_close_hover.png" pushedimage="images/unify_btn_close_down.png"/>
+			</HorizontalLayout>
+		</HorizontalLayout>
+		<!-- 下半部分 -->
+		<TabLayout name="tab_bar" selectedid="0">
+			<HorizontalLayout bkcolor="#FFEBF2F9">
+				<!-- 头像 -->
+				<VerticalLayout width="80" height="80" padding="42,12,0,0">
+					<Head mouse="false" bkimage="images/241_100.gif" autopencolor="true" width="80" height="80" />
+				</VerticalLayout>
+				<!-- 中间部分 -->
+				<VerticalLayout width="194" padding="12,12,0,0">
+					<VerticalLayout height="60">
+						<Edit font="0" name="usernameedit" tipvalue="帐号/手机/邮箱" maxchar="32" textpadding="5,5,5,5"  bkimage="file='images/edit_frame_normal_reversed.png' corner='1,1,1,1'" hotimage="file='images/edit_frame_hover_reversed.png' corner='1,1,1,1'" focusedimage="file='images/edit_frame_hover_reversed.png' corner='1,1,1,1'" height="30" />
+						<Edit name="passwordedit" tipvalue="密码" maxchar="32" password="true" textpadding="5,5,5,5" padding="0,-1,0,0" bkimage="file='images/edit_frame_normal.png' corner='1,1,1,1'" hotimage="file='images/edit_frame_hover.png' corner='1,1,1,1'" focusedimage="file='images/edit_frame_hover.png' corner='1,1,1,1'" height="30" />
+					</VerticalLayout>
+					<!-- 登录按钮 -->
+					<VerticalLayout>
+						<Button font="0" name="loginbtn" padding="0,8,0,0" height="30" text="登  录" textcolor="#FFFFFFFF" normalimage="images/button_login_normal.png" hotimage="images/button_login_hover.png" pushedimage="images/button_login_down.png" />
+					</VerticalLayout>
+				</VerticalLayout>
+				<!-- 右边部分 -->
+				<VerticalLayout padding="10,12,0,0">
+					<Button padding="0,2,0,0" font="0" width="50" text="注册帐号" textcolor="#FF2685E3" />
+					<Button padding="0,5,0,0" font="0" width="50" text="找回密码" textcolor="#FF2685E3" />
+				</VerticalLayout>
+			</HorizontalLayout>
+			<!-- 登录中面板 -->
+			<VerticalLayout bkcolor="#FFEBF2F9" >
+				<HorizontalLayout >
+					<Control />
+					<VerticalLayout width="194">
+						<!-- 登录中头像 -->
+						<HorizontalLayout height="80" padding="0,10,0,0">
+							<Control />
+							<HorizontalLayout width="80" height="80" >
+								<Head mouse="false" bkimage="images/241_100.gif" autopencolor="true" width="80" height="80" />
+							</HorizontalLayout>
+							<Control />
+						</HorizontalLayout>
+						<!-- 登录中帐号 -->
+						<HorizontalLayout padding="0,8,0,0" height="20">
+							<HorizontalLayout>
+								<Text name="loginusernameedit" font="3" align="center" textcolor="#FF999999" />
+							</HorizontalLayout>
+						</HorizontalLayout>
+						<!-- 取消按钮 -->
+						<VerticalLayout padding="0,8,0,0" height="30">
+							<Button name="cancelbtn" font="0" padding="0,0,0,0" height="30" text="取  消" textcolor="#FFFFFFFF" normalimage="images/button_login_normal.png" hotimage="images/button_login_hover.png" pushedimage="images/button_login_down.png" />
+						</VerticalLayout>
+					</VerticalLayout>
+					<Control />
+				</HorizontalLayout>
+			</VerticalLayout>
+		</TabLayout>
+		<!-- 登录提示 -->
+		<VerticalLayout name="loginresult_layout" height="46" bkcolor="#FFF9F4D6" visible="false">
+			<HorizontalLayout padding="0,0,0,0" height="25">
+				<Button padding="2,9,0,0" bkimage="images/i.png" width="16" height="16" mouse="false" />
+				<Text padding="2,7,0,0" name="loginresulttext" text="登录失败" font="3" align="left" textcolor="#FF000000" />
+				<Button tooltip="关闭" name="close2btn" padding="0,0,0,0" pos="0,0,16,0" width="16" height="16" normalimage="images/unify_btn_close_hover.png" hotimage="images/unify_btn_close_hover.png" pushedimage="images/unify_btn_close_down.png"/>
+			</HorizontalLayout>
+			<HorizontalLayout padding="0,-5,0,0">
+				<Button padding="20,0,0,0" font="0" width="50" text="了解详情" textcolor="#FF2685E3" />
+			</HorizontalLayout>
+		</VerticalLayout>
+	</VerticalLayout>
+</Window>

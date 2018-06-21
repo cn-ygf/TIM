@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window showshadow="true" shadowimage="images/shadow.png" shadowcorner="23,13,23,33">
+<Font name="微软雅黑" size="12" bold="false" default="true" />
+<Font name="微软雅黑" size="12" bold="true"/>
+
+<!-- Menu标签的属性要通过Default来定义，为了让下级菜单也能拥有同样的外观 -->
+<Default name="Menu" value="textcolor=&quot;0xFFFFFFFF&quot; bordersize=&quot;1&quot; borderround=&quot;0,1&quot; bordercolor=&quot;0xFFDAD7D6&quot; inset=&quot;2,2,2,2&quot; itemtextpadding=&quot;40,0,0,0&quot; bkcolor=&quot;0xFFFFFFFF&quot; itemselectedbkcolor=&quot;0xFFEBECEE&quot;" />
+<!-- ExplandIcon属性定义了下级菜单的小图标的样子 -->
+<Menu>
+    <MenuElement width="178" text="关于" />
+	<MenuElement text="帮助" />
+	<MenuElement text="设置" />
+	<MenuElement text="更换帐号" />
+	<MenuElement text="退出" />
+</Menu>
+</Window>

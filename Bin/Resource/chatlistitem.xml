@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Window>
+	<Font id="4" name="微软雅黑" size="14"/>
+	<ListContainerElement >
+		<VerticalLayout pos="0,0,0,60">
+			<HorizontalLayout >
+				<VerticalLayout pos="0,0,60,0" inset="10,10,0,0">
+					<Head name="headbtn" bkimage="images/251_100.gif" autopencolor="true" width="42" height="42" />
+				</VerticalLayout>
+				<VerticalLayout>
+					<HorizontalLayout>
+						<Label padding="0,8,0,0" name="nicktext" font="4" text="babyQ" textcolor="#FF282C30"/>
+						<Control />
+						<Label padding="0,8,0,0" name="timetext" font="4" text="18:15" textcolor="#FF999999"/>
+					</HorizontalLayout>
+					<VerticalLayout>
+						<Label padding="0,0,0,0" name="msgtext" font="5" text="测试消息" textcolor="#FF999999"/>
+					</VerticalLayout>
+				</VerticalLayout>
+			</HorizontalLayout >
+		</VerticalLayout>
+	</ListContainerElement >
+</Window>
+

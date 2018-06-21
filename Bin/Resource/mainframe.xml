@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Window size="900,550" sizebox="4,4,4,4" caption="0,0,0,55" showshadow="true" shadowimage="images/shadow.png" shadowcorner="23,13,23,33">
+	<Font id="0" name="微软雅黑" size="16"/>
+	<Font id="1" name="微软雅黑" size="12"/>
+	<Font id="3" name="微软雅黑" size="15"/>
+	<Font id="4" name="微软雅黑" size="14"/>
+	<VerticalLayout bkcolor="#FFFFFFFF">
+		<!-- 标题栏 -->
+		<HorizontalLayout height="55" bkimage="images/bg.png">
+			<!-- 头像 -->
+			<VerticalLayout width="42" padding="10,6,0,0" >
+				<Head mouse="true" bkimage="images/241_100.gif" autopencolor="true" width="42" height="42" />
+			</VerticalLayout>
+			<Button name="logobtn" float="true" pos="10,6" width="42" height="42" borderround="21,21" />
+			<Control />
+			<!-- 切换 按钮 -->
+			<HorizontalLayout width="150" height="32" padding="0,12,0,0">
+				<Option tooltip="消息" selected="true" group="title" name="chatbtn" padding="0,0,0,0" pos="0,0,32,0" normalimage="images/icon_last_normal.png" hotimage="images/icon_last_hover.png"  pushedimage="images/icon_last_selected.png" selectedimage="images/icon_last_selected.png"/>
+				<Option tooltip="联系人" group="title" name="contactsbtn" padding="30,0,0,0" pos="0,0,32,0" normalimage="images/icon_contacts_normal.png" hotimage="images/icon_contacts_hover.png" pushedimage="images/icon_contacts_selected.png" selectedimage="images/icon_contacts_selected.png"/>
+				<Option tooltip="在线文档" group="title" name="filebtn" padding="30,0,0,0" pos="0,0,32,0" normalimage="images/icon_file_normal.png" hotimage="images/icon_file_hover.png" pushedimage="images/icon_file_selected.png" selectedimage="images/icon_file_selected.png"/>
+			</HorizontalLayout>
+			<Control />
+			<!-- 系统按钮 -->
+			<HorizontalLayout width="86" height="16" padding="0,20,0,0" >
+				<Button tooltip="最小化" name="minbtn" padding="8,0,0,0" pos="0,0,16,0" normalimage="images/unify_btn_min_normal.png" hotimage="images/unify_btn_min_hover.png" pushedimage="images/unify_btn_min_down.png"/>
+				<Button tooltip="最大化" name="maxbtn" padding="8,0,0,0" pos="0,0,16,0" normalimage="images/unify_btn_max_normal.png" hotimage="images/unify_btn_max_hover.png" pushedimage="images/unify_btn_max_down.png"/>
+				<Button tooltip="还原" name="restorebtn" padding="8,0,0,0" visible="false" pos="0,0,16,0" normalimage="images/unify_btn_restore_normal.png" hotimage="images/unify_btn_restore_hover.png" pushedimage="images/unify_btn_restore_down.png"/>
+				<Button tooltip="关闭" name="closebtn" padding="8,0,0,0" pos="0,0,16,0" normalimage="images/unify_btn_close_normal.png" hotimage="images/unify_btn_close_hover.png" pushedimage="images/unify_btn_close_down.png"/>
+			</HorizontalLayout>
+		</HorizontalLayout>
+		<!-- 下半部分 -->
+		<TabLayout name="tab_bar" selectedid="0">
+			<!-- 消息面板 -->
+			<HorizontalLayout>
+				<!-- 会话列表 -->
+				<VerticalLayout width="250" bkcolor="#FFFAFAFA">
+					<ListEx padding="0,5,0,0" name="chatlist" itemshowhtml="true" header="hidden" itemhotbkcolor="FFEBEBEC" itemselectedbkcolor="FFEBEBEC" />
+				</VerticalLayout>
+				<!-- 聊天窗口 -->
+				<VerticalLayout bkcolor="#FFFFFFFF">
+				
+				</VerticalLayout>
+			</HorizontalLayout>
+			<!-- 联系人面板 -->
+			<HorizontalLayout bkcolor="#FFADFF2F">
+				<!-- 联系人列表 -->
+				<VerticalLayout width="250" bkcolor="#FFFAFAFA">
+					<!-- 联系人tab-->
+					<HorizontalLayout height="42">
+						<Control />
+						<Option font="3" text="好友" selected="true" width="30" group="tab_firends" name="friendsbtn" padding="0,0,0,0" normalimage="" hotimage="images/tab_boom.png"  pushedimage="images/tab_boom.png" selectedimage="images/tab_boom.png"/>
+						<Option font="3" text="群" selected="false" width="18" group="tab_firends" name="groupbtn" padding="40,0,0,0" normalimage="" hotimage="images/tab_boom.png"  pushedimage="images/tab_boom.png" selectedimage="images/tab_boom.png"/>
+						<Option font="3" text="多人聊天" selected="false" width="56" group="tab_firends" name="mutilchatbtn" padding="40,0,0,0" normalimage="" hotimage="images/tab_boom.png"  pushedimage="images/tab_boom.png" selectedimage="images/tab_boom.png"/>
+						<Control />
+					</HorizontalLayout>
+					<Control height="1" padding="0,0,0,0" bkcolor="#FFE8E9EA" />
+					<TabLayout name="tab_contacts_bar" selectedid="0">
+						<!-- 好友列表 -->
+						<VerticalLayout >
+							<ListEx padding="0,5,0,0" name="firendslist" itemshowhtml="true" header="hidden" itemhotbkcolor="FFEBEBEC" itemselectedbkcolor="FFEBEBEC" />
+						</VerticalLayout>
+						<VerticalLayout bkcolor="#FF66CCFF">
+						    <ListEx padding="0,5,0,0" name="grouplist" itemshowhtml="true" header="hidden" itemhotbkcolor="FFEBEBEC" itemselectedbkcolor="FFEBEBEC" />
+						</VerticalLayout>
+						<VerticalLayout bkcolor="#FF00CCFF">
+						    <ListEx padding="0,5,0,0" name="multiplayerlist" itemshowhtml="true" header="hidden" itemhotbkcolor="FFEBEBEC" itemselectedbkcolor="FFEBEBEC" />
+						</VerticalLayout>
+					</TabLayout>
+				</VerticalLayout>
+				<!-- 联系人资料 -->
+				<VerticalLayout bkcolor="#FFE5E7EC">
+				
+				</VerticalLayout>
+			</HorizontalLayout>
+			<!-- 在线文档面板 -->
+			<VerticalLayout bkcolor="#FF66CCFF">
+				
+			</VerticalLayout>
+		</TabLayout>
+	</VerticalLayout>
+</Window>
